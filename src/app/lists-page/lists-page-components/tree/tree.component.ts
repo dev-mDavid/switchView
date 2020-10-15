@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, Output, OnInit, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'tree',
@@ -6,7 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tree.component.sass']
 })
 export class TreeComponent implements OnInit {
+  @Input() task: any;
+  @Output() deleteTaskEvent = new EventEmitter<string>()
 
+  deleteTask(value) {
+    this.deleteTaskEvent.emit(value)
+  }
   constructor() { }
 
   ngOnInit(): void {
