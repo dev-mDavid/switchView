@@ -1,1 +1,11 @@
-<p>time-blocks-page works!</p>
+<h1>Time Blocks</h1>
+<div style="padding-left: 50%">
+
+  <div *ngFor="let task of tasks | async">
+    <h3>Task ID: {{ task.id }}</h3>
+    <p>Task Title: {{ task.title }} </p>
+    <button (click)="deleteTask(task.id)">Delete</button>
+  </div>
+
+  <button (click)="createTask()">Create Task</button>
+</div>

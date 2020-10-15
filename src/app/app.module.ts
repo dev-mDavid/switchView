@@ -5,8 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
+
 import { NavShellComponent } from './nav-shell/nav-shell.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { StoreModule } from "@ngrx/store";
+import { StoreDevtoolsModule } from "@ngrx/store-devtools";
+
+import { reducers } from "./reducers";
 
 
 @NgModule({
@@ -20,7 +26,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppRoutingModule,
     CoreModule,
     SharedModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    StoreModule.forRoot(reducers),
+    StoreDevtoolsModule.instrument({
+      maxAge: 25
+    }),
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
