@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "public",
+    "public": "dist/switchView",
     "ignore": [
       "firebase.json",
       "**/.*",
@@ -8,8 +8,8 @@
     ],
     "rewrites": [
       {
-        "source": "../src",
-        "destination": "/index.html"
+        "source": "**",
+        "destination": "../src/index.html"
       }
     ]
   }
