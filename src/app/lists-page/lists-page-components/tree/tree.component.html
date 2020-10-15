@@ -1,3 +1,16 @@
-<h3>Task ID: {{ task.id }}</h3>
-<p>Task Title: {{ task.title }} </p>
-<button (click)="deleteTask(task.id)">Delete</button>
+<div class='tree'>
+  <h3>Task ID:{{ task.id }}</h3>
+  <p>Priority #{{ task.priority }} </p>
+  <p>{{ task.title }} </p>
+  
+<!-- <mat-form-field class="example-full-width">
+  <mat-label>Task</mat-label>
+  <input matInput [(value)]="task.title" placeholder="Title" value=value>
+
+</mat-form-field> -->
+<!-- <button (click)="updateTask(task.id, task.title)">Update</button> -->
+
+  <button (click)="deleteTask(task.id)">Delete</button>
+
+</div>
+

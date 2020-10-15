@@ -21,7 +21,9 @@ const defaultTask = {
   entities: {
     '123': {
       id: '123',
-      title: 'New Task'
+      title: 'New Task',
+      priority: 42,
+      checkBox: false,
     }
   }
 }
